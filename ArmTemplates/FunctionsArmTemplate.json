@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "skuName": {
+      "type": "string",
+      "defaultValue": "F1",
+      "allowedValues": [
+        "F1",
+        "D1",
+        "B1",
+        "B2",
+        "B3",
+        "S1",
+        "S2",
+        "S3",
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "metadata": {
+        "description": "Describes plan's pricing tier and capacity. Check details at https://azure.microsoft.com/en-us/pricing/details/app-service/"
+      }
+    },
+    "hostingPlanName": {
+      "type": "string",
+      "defaultValue": "UnbreakablePipelineapp"
+    },
+    "skuCapacity": {
+      "type": "int",
+      "defaultValue": 1,
+      "minValue": 1,
+      "metadata": {
+        "description": "Describes plan's instance count"
+      }
+    },
+    "functionName": {
+      "type": "array",
+      "defaultValue":  [ "SelfHealingFunction", "UnbreakablePipelineFunction" ]
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2015-08-01",
+      "name": "UnbreakableFunctionApps",
+      "type": "Microsoft.Web/serverfarms",
+      "location": "[resourceGroup().location]",
+      "tags": {
+        "displayName": "UnbreakableFunctionApps"
+      },
+      "sku": {
+        "name": "[parameters('skuName')]",
+        "capacity": "[parameters('skuCapacity')]"
+      },
+      "properties": {
+        "name": "UnbreakableFunctionApps"
+      }
+    },
+    {
+      "apiVersion": "2015-08-01",
+      "name": "[parameters('functionName')[copyIndex()]]",
+      "type": "Microsoft.Web/sites",
+      "kind": "functionapp",
+      "location": "[resourceGroup().location]",
+      "copy": {
+        "name": "functionAppsCopy",
+        "count": "[length(parameters('functionName'))]"
+      },
+      "tags": {
+        "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource",
+        "displayName": "[parameters('functionName')[copyIndex()]]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms/', 'UnbreakableFunctionApps')]"
+      ],
+      "properties": {
+        "name": "[parameters('functionName')[copyIndex()]]",
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'UnbreakableFunctionApps')]"
+      }
+    }
+  ]
+}
