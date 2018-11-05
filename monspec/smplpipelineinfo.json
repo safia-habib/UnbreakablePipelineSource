@@ -1,0 +1,7 @@
+{
+    "displayName" : "SampleDevOpsPipeline",
+    "favicon" : "https://upload.wikimedia.org/wikipedia/commons/5/5c/AWS_Simple_Icons_AWS_Cloud.svg",
+    "configUrl" : "https://us-west-2.console.aws.amazon.com/codepipeline/home?region=us-west-2#/view/SampleDevOpsPipeline",
+    "tags" : ["MyTag1", "MyTag2"],
+    "properties" : {"region" : "us-west-2", "Project" : "SampleDevOpsPipeline"}
+}
