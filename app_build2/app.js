@@ -5,7 +5,7 @@ var port = process.env.PORT || 8080,
 	dttags = process.env.DT_TAGS || "<EMPTY>",
 	dtcustprops = process.env.DT_CUSTOM_PROP || "<EMPTY>",
 	dtclusterid = process.env.DT_CLUSTER_ID || "<EMPTY>",
-    html = fs.readFileSync('index.html').toString().replace("HOSTNAME", os.hostname() + " with DT_TAGS=" + dttags + "\nDT_CUSTOM_PROP=" + dtcustprops + "\nDT_CLUSTER_ID=" + dtclusterid);
+    html = fs.readFileSync(__dirname + '/index.html').toString().replace("HOSTNAME", os.hostname() + " with DT_TAGS=" + dttags + "\nDT_CUSTOM_PROP=" + dtcustprops + "\nDT_CLUSTER_ID=" + dtclusterid);
 
 
 // ======================================================================
