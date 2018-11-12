@@ -1,5 +1,3 @@
-# UnbreakablePipelineSource
-
 # Integrate Dynatrace with Azure Devops
 
 Azure Devops provides multiple development collaboration tools. For this Workshop we will be using the following tools to create a high performant, resilient, self- healing pipeline:
@@ -29,12 +27,12 @@ Azure Storage account: Used for storing the monspec file and the pipelineinfo fi
 3. Dynatrace Account. [Start your free SaaS trial](https://www.dynatrace.com/trial/)
 4. Copy this Github repo to your file system
 
-## Preparation##
+## Preparation
 1. Upload the Monspec files to Azure Storage Account 
 
 
-##Deployment
+## Deployment
 
-##Result
+## Result
 
 
