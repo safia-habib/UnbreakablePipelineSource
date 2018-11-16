@@ -86,14 +86,28 @@
           {
             "name": "Inbound",
             "properties": {
-              "description": "This is the Inbound rule",
+              "description": "This is the Inbound rule To access the node app",
               "protocol": "Tcp",
-              "sourcePortRange": "8080",
-              "destinationPortRange": "*",
+              "sourcePortRange": "*",
+              "destinationPortRange": "8080",
               "sourceAddressPrefix": "*",
               "destinationAddressPrefix": "*",
               "access": "Allow",
               "priority": 123,
+              "direction": "Inbound"
+            }
+          },
+          {
+            "name": "Inbound",
+            "properties": {
+              "description": "This is the Inbound rule for ssh access",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "22",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 125,
               "direction": "Inbound"
             }
           },
