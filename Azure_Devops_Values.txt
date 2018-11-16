@@ -2,7 +2,7 @@ URL to Monspec File:
 URL to PipelineInfo File
 PAT:
 Dynatrace_Tenant:
-Dynatrace_Tenant_Token:
+Dynatrace_Token:
 Dynatrace_API_TOKEN:
 SelfHealing Function URL:
 UnbreakablePipelienGate Function URL:
