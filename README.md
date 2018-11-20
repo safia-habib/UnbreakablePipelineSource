@@ -67,7 +67,7 @@ Arm Templates: Containing the Azure Resource Manager Templates for Unbreakable g
 App: The Node.js app we will use to test out the Unbreakable Pipeline
 Functions Code: The code for the Unbreakable Pipeline gate Function and Self Healing Function.
 You can inspect these by going to the build -> Artifacts: 
-![](./images/ExploreBuildArtifacts/PNG)
+![](./images/ExploreBuildArtifacts.PNG)
 
 We will use these in our Next step to Finish the Deployment 
 
