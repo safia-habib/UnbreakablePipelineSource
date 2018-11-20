@@ -84,7 +84,7 @@
       "properties": {
         "securityRules": [
           {
-            "name": "Inbound",
+            "name": "Inbound8080",
             "properties": {
               "description": "This is the Inbound rule To access the node app",
               "protocol": "Tcp",
@@ -98,7 +98,7 @@
             }
           },
           {
-            "name": "Inbound",
+            "name": "Inbound22",
             "properties": {
               "description": "This is the Inbound rule for ssh access",
               "protocol": "Tcp",
