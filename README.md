@@ -4,6 +4,10 @@ Azure Devops provides multiple development collaboration tools. For this Worksho
 *Azure Repos:* Source control repository for the test application. You can read more on Azure Repos [here](https://docs.microsoft.com/en-us/azure/devops/repos/?view=vsts). 
 *Azure Pipelines:* Creating CI/CD pipelines for deploying the test application. You can read more on Azure Devops Pipelines [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/index?view=vsts). 
 
+## Documentation:
+Find the Step by Step implementation attached to the Github in Unbreakable Azure Devops Pipeline using Dynatrace.pptx
+We did a Performance Clinic with Andreas Grabner. The slides are attached to the Github repo as PerformanceClinic_UnbreakablePipeline_Azure.pptx and the full video is available [here](https://www.youtube.com/watch?v=YCdIU_16_KE)
+
 ## Additional Utilities – 
 
 **Azure Devops Extension:** Deployed in Azure Marketplace: Contains – 
