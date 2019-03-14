@@ -1,6 +1,6 @@
 # Disclaimer 
 
-**This repo is no longer supported. The Marketplace extension for Dynatrace in Azure DevOps is no longer supported. While we implemented the extension - the new way is to use powershell scripts and built in gates for Azure DevOps as they provide more flexibility and easier maintenance. **
+**This repo is no longer supported. The Marketplace extension for Dynatrace in Azure DevOps is no longer supported. While we implemented the extension - the new way is to use powershell scripts and built in gates for Azure DevOps as they provide more flexibility and easier maintenance.**
 
 # Integrate Dynatrace with Azure Devops
 
