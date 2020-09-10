@@ -1,6 +1,8 @@
 # Disclaimer 
 
-**This repo is no longer supported. The Marketplace extension for Dynatrace in Azure DevOps is no longer supported. While we implemented the extension - the new way is to use powershell scripts and built in gates for Azure DevOps as they provide more flexibility and easier maintenance.**
+**This repo is no longer supported. The Marketplace extension for Dynatrace in Azure DevOps is no longer supported. While we implemented the extension - the new way is to use 
+
+open source project Keptn (www.keptn.sh) and there now exists Keptn Azure DevOps Extension (https://github.com/keptn-sandbox/keptn-azure-devops-extension)**
 
 # Integrate Dynatrace with Azure Devops
 
